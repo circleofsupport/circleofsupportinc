@@ -23,17 +23,41 @@
             flex-wrap: wrap;
         }
 
-        /* The White Badge container for the JPG logo */
+        /* Text Logo (no image needed!) */
         .logo-badge {
             background-color: #ffffff;
-            padding: 15px;
+            padding: 10px 20px;
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
-
-        .logo-badge img {
-            height: 70px;
-            display: block;
+        .logo-monogram {
+            background: #6047d3;
+            color: #ffffff;
+            font-weight: 900;
+            font-size: 24px;
+            padding: 5px 12px;
+            border-radius: 8px;
+            line-height: 1.2;
+        }
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+        .logo-text .line1 {
+            font-size: 11px;
+            letter-spacing: 2.5px;
+            color: #6047d3;
+            font-weight: 700;
+        }
+        .logo-text .line2 {
+            font-size: 15px;
+            letter-spacing: 1px;
+            color: #35b5c1;
+            font-weight: 700;
         }
 
         /* Navigation */
@@ -41,6 +65,7 @@
             display: flex;
             gap: 10px;
             margin-top: 10px;
+            flex-wrap: wrap;
         }
 
         .nav-buttons a {
@@ -55,13 +80,13 @@
             background: rgba(255,255,255,0.4);
         }
 
-        /* Hero Section */
+        /* Hero Section - NOW WITH BACKGROUND */
         .hero {
-    text-align: center;
-    padding: 60px 20px;
-    color: white;
-    background: linear-gradient(135deg, #6047d3, #35b5c1);
-}
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+            background: linear-gradient(135deg, #6047d3, #35b5c1);
+        }
         .hero h1 {
             font-size: 2.5rem;
             margin-bottom: 10px;
@@ -200,10 +225,13 @@
             }
             .nav-buttons {
                 justify-content: center;
-                flex-wrap: wrap;
             }
             .hero h1 {
                 font-size: 1.8rem;
+            }
+            .logo-badge {
+                flex-direction: column;
+                text-align: center;
             }
         }
     </style>
@@ -212,9 +240,13 @@
 
     <!-- Header Section -->
     <div class="header">
-        <!-- IMPORTANT: The white box wraps your JPG so it doesn't look like a white square on the blue gradient -->
+        <!-- TEXT LOGO (no image needed, never breaks!) -->
         <div class="logo-badge">
-            <img src="IMG_1507.jpg" alt="Circle of Support Inc Logo">
+            <span class="logo-monogram">COS</span>
+            <div class="logo-text">
+                <span class="line1">CIRCLE OF</span>
+                <span class="line2">SUPPORT INC.</span>
+            </div>
         </div>
         
         <div class="nav-buttons">
@@ -226,7 +258,7 @@
         </div>
     </div>
 
-    <!-- Hero / Slogan -->
+    <!-- Hero / Slogan (NOW VISIBLE!) -->
     <div class="hero">
         <h1>CIRCLE OF SUPPORT INC.</h1>
         <p>Together, we create a circle where everyone belongs.</p>
